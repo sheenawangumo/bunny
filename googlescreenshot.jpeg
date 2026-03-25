@@ -1,0 +1,5 @@
+from PIL import Image
+
+# Open and display an image
+img = Image.open('image.png')
+img.show()
