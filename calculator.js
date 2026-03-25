@@ -1,36 +1,39 @@
+//creating a history log for my calculator functions, so that i can see previous calculations and their results 
 var calculationHistory = [];
-function addToHistory(number1, number2, symbol, total) {
-  var item = {
-    operands: [number1, number2],
+function addToHistory(a, b, symbol, total) {
+  var record = {
+    operands: [a, b],
     operator: symbol,
     result: total
   };
-  calculationHistory.push(item);
+  calculationHistory.push(record);
 }
-function add(num1, num2) {
-  var result = num1 + num2;
-  addToHistory(num1, num2, "+", result);
+//  creating the calculator functions, and calling the addToHistory function to store the calculations in the history log
+//add function
+function add(a, b) {
+  var result = a + b;
+  addToHistory(a, b, "+", result);
   return result;
 }
-
-function subtract(num1, num2) {
-  var result = num1 - num2;
-  addToHistory(num1, num2, "-", result);
+//subtract function
+function subtract(a, b) {
+  var result = a - b;
+  addToHistory(a, b, "-", result);
   return result;
 }
-
-function multiply(num1, num2) {
-  var result = num1 * num2;
-  addToHistory(num1, num2, "*", result);
+//multiply function
+function multiply(a, b) {
+  var result = a * b;
+  addToHistory(a, b, "*", result);
   return result;
 }
-
-function divide(num1, num2) {
-  var result = num1 / num2;
-  addToHistory(num1, num2, "/", result);
+//function divide
+function divide(a, b) {
+  var result = a / b;
+  addToHistory(a, b, "/", result);
   return result;
 }
-
+//function to show the history log of calculations to my users
 function showHistory() {
   if (calculationHistory.length === 0) {
     console.log("no stored calculations");
@@ -39,12 +42,3 @@ function showHistory() {
     console.log(calculationHistory);
   }
 }
-
-// --- Examples of using the program ---
-add(10, 5);
-subtract(20, 10);
-multiply(4, 5);
-divide(100, 2);
-
-// Request to see the history
-showHistory();
