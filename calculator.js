@@ -42,3 +42,4 @@ function showHistory() {
     console.log(calculationHistory);
   }
 }
+//"I used AI to help me understand how to structure the history array, and then I wrote the functions and comments myself to make sure I understood the math logic.
