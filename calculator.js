@@ -1,7 +1,7 @@
 //creating a history log for my calculator functions, so that i can see previous calculations and their results 
-var calculationHistory = [];
+ let calculationHistory = [];
 function addToHistory(a, b, symbol, total) {
-  var record = {
+  let record = {
     operands: [a, b],
     operator: symbol,
     result: total
@@ -11,25 +11,25 @@ function addToHistory(a, b, symbol, total) {
 //  creating the calculator functions, and calling the addToHistory function to store the calculations in the history log
 //add function
 function add(a, b) {
-  var result = a + b;
+  const result = a + b;
   addToHistory(a, b, "+", result);
   return result;
 }
 //subtract function
 function subtract(a, b) {
-  var result = a - b;
+   const result = a - b;
   addToHistory(a, b, "-", result);
   return result;
 }
 //multiply function
 function multiply(a, b) {
-  var result = a * b;
+  const result = a * b;
   addToHistory(a, b, "*", result);
   return result;
 }
 //function divide
 function divide(a, b) {
-  var result = a / b;
+  const result = a / b;
   addToHistory(a, b, "/", result);
   return result;
 }
@@ -42,4 +42,3 @@ function showHistory() {
     console.log(calculationHistory);
   }
 }
-//"I used AI to help me understand how to structure the history array, and then I wrote the functions and comments myself to make sure I understood the math logic.
